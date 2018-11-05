@@ -1,0 +1,155 @@
+/********************************
+	Fonts
+********************************/
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,700');
+/********************************
+	Variables
+********************************/
+$fontSize: 30px;
+$inactiveColor: #999;
+$blue: #4b7cc5;
+$white: #fff;
+
+
+/********************************
+	General
+********************************/
+body {
+	margin: 0;
+	padding: 0; 
+	color: white;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 300;
+	font-size: $fontSize;
+}
+
+
+
+/********************************
+	Calculator
+********************************/
+#calculator {
+	width: 100vw;
+	height: 100vh;
+	background-color: #303030;
+}
+
+
+
+/********************************
+	Display
+********************************/
+#screen {
+	height: 25vh;
+	width: 100vw;
+	text-align: right;
+
+	#display {
+		font-size: 3rem;
+		padding-right: 25px;
+		padding-top: 5%;
+	}
+	#total {
+		font-size: 2rem;
+		padding-right: 25px;
+		color: $inactiveColor;
+	}
+}
+
+
+/********************************
+	Bar
+********************************/
+#bar {
+	height: 7.5vh;
+	font-size: 18px;
+
+	#back {
+		float: right;
+		padding-right: 25px;
+		cursor: pointer;
+		color: $inactiveColor;
+	}
+}
+
+
+
+/********************************
+	Inputs
+********************************/
+.grid {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	height: 67.5vh;
+	width: 100vw;
+
+	.grid-item {
+		font-size: 2.1rem;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+#clear {
+	background-color: #9c131d;
+	&:active {
+		background-color: #9e2e35;
+	}
+}
+
+.number, .decimal, .zero, .squareroot {
+	background-color: #282828;
+	&:active {
+		background-color: #303030;
+	}
+}
+.operation,  .squared  {
+	background-color: #2c2c2c;
+	color: $blue;
+	font-weight: bold;
+	&:active {
+		background-color: #282828;
+	}
+}
+#equals {
+	background-color: $blue;
+	font-weight: bold;
+	&:active {
+		background-color: #35588b;
+	}
+}
+
+
+/********************************
+	Media Screen
+********************************/
+@media (min-width: 770px) {
+	html {
+		background-image: url('https://s-media-cache-ak0.pinimg.com/564x/15/f3/ff/15f3ffa56618935d5ca536a119ff40a6.jpg')
+	}
+	#calculator {
+		width: 400px;
+		height: 700px;
+		margin: auto;
+		margin-top: 7.5%;
+		overflow: hidden;
+    	box-shadow: 0px 0px 60px 15px #333;
+	}
+	#screen {
+		height: 25%;
+		width: 100%;
+	}
+	#bar {
+		height: 7.5%;
+	}
+	.grid {
+		height: 67.5%;
+		width: 100%;
+	}
+}
+
+
+
+
+
